@@ -41,11 +41,12 @@ int main(){
     scanf("%f",&pib2);
     printf("Digite o número de pontos turísticos da segunda cidade: ");
     scanf("%d", &turi2);
+    getchar();
 
     nome1[strcspn(nome1, "\n")] = 0;
     nome2[strcspn(nome2, "\n")] = 0;
 
-    printf("Carta 1:\n");
+    printf("\nCarta 1:\n");
     printf("Estado: %s\n",estcart1);
     printf("Código: %s%d\n",estcart1, cod1);
     printf("Nome da cidade: %s\n",nome1);
