@@ -41,10 +41,10 @@ int main(){
 
     nome1[strcspn(nome1, "\n")] = 0;
     nome2[strcspn(nome2, "\n")] = 0;
-    percp1= pib1/pop1;
-    percp2= pib2/pop2;
-    dens1= pop1/area1;
-    dens2= pop2/area2;
+    percp1= (float)pib1/pop1;
+    percp2= (float)pib2/pop2;
+    dens1= (float)pop1/area1;
+    dens2= (float)pop2/area2;
 
 
     printf("\nCarta 1:\n");
