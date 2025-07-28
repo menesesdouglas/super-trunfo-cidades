@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main(){
-    char estcart1[1],estcart2[1],nome1[50],nome2[50];
+    char estcart1[2],estcart2[2],nome1[50],nome2[50];
     int cod1,cod2,turi1,turi2;
     unsigned long int pop1;
     unsigned long int pop2;
@@ -11,9 +11,8 @@ int main(){
     printf("Bem vindo ao sistema de cadastro de cidades!\n");
     printf("Digite o nome da primeira cidade: ");
     fgets(nome1,50,stdin);
-    getchar();
     printf("Digite uma letra de 'A' a 'H' para o estado da primeira cidade: ");
-    scanf("%1s", &estcart1);
+    scanf("%s", &estcart1);
     getchar();
     printf("Digite o codigo, sendo um número de '01' a '04', da primeira cidade: ");
     scanf("%d",&cod1);
@@ -29,9 +28,8 @@ int main(){
 
     printf("Digite o nome da segunda cidade: ");
     fgets(nome2,50,stdin);
-    getchar();
     printf("Digite uma letra de 'A' a 'H' para o estado da segunda cidade: ");
-    scanf("%1s",&estcart2);
+    scanf("%s",&estcart2);
     getchar();
     printf("Digite o codigo, sendo um número de '01' a '04', da segunda cidade: ");
     scanf("%d",&cod2);
@@ -60,7 +58,7 @@ int main(){
     printf("Estado: %s\n",estcart1);
     printf("Código: %s%d\n",estcart1, cod1);
     printf("Nome da cidade: %s\n",nome1);
-    printf("População: %d\n",pop1);
+    printf("População: %lu\n",pop1);
     printf("Área: %.2f km²\n",area1);
     printf("PIB: R$%.2f\n",pib1);
     printf("Pontos turísticos: %d\n",turi1);
@@ -72,7 +70,7 @@ int main(){
     printf("Estado: %s\n",estcart2);
     printf("Código: %s%d\n",estcart2, cod2);
     printf("Nome da cidade: %s\n",nome2);
-    printf("População: %d\n",pop2);
+    printf("População: %lu\n",pop2);
     printf("Área: %.2f km²\n",area2);
     printf("PIB: R$%.2f\n",pib2);
     printf("Pontos turísticos: %d\n",turi2);
@@ -82,10 +80,10 @@ int main(){
 
     printf("\nComparação:\n");
     if(pop1>pop2){
-        printf("População: Carta 1 venceu (%d)",pop1>pop2);
+        printf("População: Carta 1 venceu (%d)\n",pop1>pop2);
     }
     else if(pop1<pop2){
-        printf("População: Carta 2 venceu (%d)",pop1<pop2);
+        printf("População: Carta 2 venceu (%d)\n",pop1<pop2);
     }
     else{
         printf("População: Empate\n");
@@ -94,7 +92,7 @@ int main(){
         printf("Área: Carta 1 venceu (%d)\n", area1>area2);
     }
     else if(area1<area2){
-        printf("Área: Carta 2 venceu (%d)", area1<area2);
+        printf("Área: Carta 2 venceu (%d)\n", area1<area2);
     }
     else{
         printf("Área: Empate\n");
