@@ -1,90 +1,139 @@
-# 🃏 Super Trunfo de Cidades
+🏙️ Super Trunfo Cidades
 
-Este projeto é uma versão inicial de um jogo estilo *Super Trunfo*, desenvolvido como parte das atividades da faculdade. O objetivo é criar cartas com dados de cidades e exibir essas informações de forma organizada.
+Este projeto é um programa escrito em linguagem C que simula um jogo de comparação de cidades, inspirado no estilo do jogo Super Trunfo. Nele, duas cidades são cadastradas com seus respectivos dados, e o jogador pode compará-las por diferentes atributos para ver qual cidade vence em cada confronto.
+✅ Funcionalidades
 
-# 📋 Funcionalidades
+    Permite o cadastro de duas cidades;
 
-- Cadastro de duas cidades com:
-  - Nome
-  - Estado (letra de 'A' a 'H')
-  - Código (01 a 04)
-  - População
-  - Área
-  - PIB
-  - Número de pontos turísticos
-- Impressão formatada das cartas das cidades
+    Cada cidade possui:
 
-# 💻 Linguagem e Ferramentas
+        Nome;
 
-- Linguagem: C
-- Compilador recomendado: GCC
-- Sistema operacional: Compatível com Windows, Linux ou macOS
+        Código do estado (entre 'A' e 'H');
 
-# ▶️ Como executar
+        Código de identificação (de 01 a 04);
 
-1. Clone o repositório:
-  git clone https://github.com/seu-usuario/super-trunfo-cidades.git
-  cd super-trunfo-cidades/src
-2. Compile o código:
-  gcc main.c -o supertrunfo
-3. Execute o programa:
-   ./supertrunfo
+        População total;
 
-# **🏗️ Estrutura futura**
-Este projeto é apenas a base para versões mais completas do Super Trunfo. Futuramente, será possível:
-- Comparar cartas
-- Usar mais cidades
-- Jogar contra o computador
-- Interface gráfica
+        Área em km²;
 
-# **📄 Licença**
-Distribuído sob a licença MIT. Veja LICENSE para mais informações.
+        Produto Interno Bruto (PIB);
 
-Autor: Douglas Meneses Lima Oliveira
-Projeto acadêmico – Estácio de Sá
+        Quantidade de pontos turísticos.
 
+    O programa calcula automaticamente:
 
-# 🃏 City Super Trunfo
+        PIB per capita;
 
-This project is an initial version of a Super Trunfo-style game, developed as part of a university assignment. The goal is to create cards containing city data and display that information in an organized manner.
+        Densidade populacional;
 
-# 📋 Features
+        “Poder” Super Trunfo baseado nos dados inseridos.
 
-- Registration of two cities with the following data:
-  - Name
-  - State (letter from 'A' to 'H')
-  - Code (01 to 04)
-  - Population
-  - Area
-  - GDP
-  - Number of tourist attractions
-- Formatted printing of the city cards
+    O jogador pode escolher dois atributos diferentes para comparar entre as cidades.
 
-# 💻 Language and Tools
+    Exibe o vencedor de cada comparação e o resultado final do jogo.
 
-- Language: C
-- Recommended compiler: GCC
-- Operating system: Compatible with Windows, Linux, or macOS
+🧠 Requisitos para Executar
 
-# ▶️ How to Run
+Para executar este programa, você precisa:
 
-1. Clone the repository:
-  git clone https://github.com/seu-usuario/super-trunfo-cidades.git
-  cd super-trunfo-cidades/src
-2. Compile the code:
-  gcc main.c -o supertrunfo
-3. Run the program:
-   ./supertrunfo
+    Ter um compilador de C instalado no seu computador (como o GCC, presente no Linux, macOS ou Windows com MinGW ou WSL);
 
-# **🏗️ Future Structure**
-This project is just the foundation for more complete versions of the Super Trunfo game. In the future, the following features may be added:
-- Card comparison
-- Use of more cities
-- Play against the computer
-- Graphical user interface (GUI)
+    Ter acesso a um terminal ou prompt de comando;
 
-# **📄 License**
-Distributed under the MIT License. See LICENSE for more details.
+    Ter o arquivo cartas_cidades.c, que contém o código-fonte do programa.
 
-Author: Douglas Meneses Lima Oliveira
-Academic project – Estácio de Sá University
+🛠️ Como Compilar e Executar
+Em sistemas Linux ou macOS
+
+Você deve abrir o terminal e acessar a pasta onde está o arquivo do programa. Em seguida, deve usar o compilador para transformar o arquivo-fonte em um executável. Após isso, o executável poderá ser executado diretamente.
+
+Por exemplo, você irá:
+
+    Abrir o terminal;
+
+    Acessar a pasta do projeto;
+
+    Compilar o arquivo usando o compilador;
+
+    Executar o arquivo gerado.
+
+Em sistemas Windows
+
+Você pode usar o MinGW (um compilador para C no Windows) ou o WSL (subsistema do Linux para Windows). Os passos são semelhantes aos do Linux/macOS, acessando o prompt de comando, navegando até a pasta onde o arquivo está salvo, compilando e executando.
+
+Se você usa o Dev C++, Code::Blocks ou outra IDE:
+
+    Crie um novo projeto em C;
+
+    Adicione o arquivo cartas_cidades.c;
+
+    Compile e execute diretamente pela interface da IDE.
+
+💬 Como o Programa Funciona
+
+Depois de executar o programa, ele seguirá o seguinte fluxo:
+
+    Solicita os dados da primeira cidade;
+
+    Solicita os dados da segunda cidade;
+
+    Exibe os dados calculados de ambas as cidades;
+
+    Apresenta um menu com 7 atributos para comparação:
+
+        População;
+
+        Área;
+
+        PIB;
+
+        PIB per capita;
+
+        Pontos turísticos;
+
+        Densidade populacional;
+
+        Poder Super Trunfo.
+
+    Você escolhe um primeiro atributo para comparar;
+
+    O programa mostra qual cidade venceu naquele atributo;
+
+    Você escolhe um segundo atributo diferente;
+
+    O programa mostra o vencedor dessa nova comparação;
+
+    Exibe o resultado final do jogo com base nos dois confrontos.
+
+📌 Recomendações
+
+Durante a compilação do programa, é recomendado ativar os avisos de compilação para garantir que seu código está bem escrito. Isso ajuda a encontrar possíveis erros ou más práticas durante o desenvolvimento.
+📁 Estrutura do Projeto
+
+A estrutura do projeto é simples e composta pelos seguintes arquivos:
+
+    cartas_cidades.c: código-fonte principal do jogo;
+
+    README.md (ou .txt): este documento de explicação.
+
+🤝 Contribuição
+
+Você pode contribuir com este projeto fazendo melhorias no código, otimizando a lógica, adicionando novos recursos ou apenas corrigindo erros. Para isso, siga estes passos:
+
+    Faça um fork deste repositório no GitHub;
+
+    Crie uma nova branch com uma descrição da melhoria que deseja fazer;
+
+    Faça suas alterações no código;
+
+    Suba suas alterações e abra um Pull Request.
+
+🧾 Licença
+
+Este projeto é de uso educacional e está aberto para aprendizado, modificação e uso pessoal. Fique à vontade para usar como base para seus estudos.
+👨‍💻 Autor
+
+Douglas Meneses
+Estudante de Análise e Desenvolvimento de Sistemas
+Repositório: github.com/menesesdouglas/super-trunfo-cidades
